@@ -1,0 +1,45 @@
+:root {
+    --yellow: #E3B04B;
+    --light-gray: #F8F8F8;
+    --medium-gray: #515151;
+    --dark-gray: #2B2B28;
+    --light-yellow: #F1D6AB;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap);
+}
+
+svg {
+    width: 150px;
+    height: auto;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+div#left-side {
+    flex: 1 1 0;
+    height: 100vh;
+    width: 0.5vw;
+    background-color: var(--light-gray);
+}
+
+div#right-side {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    width: 0.5vw;
+    height: 100vh;
+/*     background-color: var(--dark-gray); */
+}
+
+#right-side div,
+#right-side form {
+    flex: 1 1 0;
+}
