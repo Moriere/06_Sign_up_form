@@ -118,9 +118,10 @@ a {
     color: var(--yellow);
 }
 
-.black_address > a{
+.black_address {
     color: #2B2B28;
     font-weight: inherit;
+    margin-top: 200px;
 }
 
 a:hover {
@@ -130,10 +131,6 @@ a:hover {
 form {
     display: flex;
     flex-direction: column;
-}
-
-.web_address { 
-    margin-top: 200px;
 }
 
 .terms {
@@ -175,7 +172,51 @@ input[type="password"] {
 }
 
 input:focus {
-    border-color: var(--light-yellow);
+    outline: none;
+    border: 2px solid var(--yellow);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.input_cont.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--light-gray);
+    border: none;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    border-radius: 0;
+}
+
+.input_cont.checkbox input,
+.input_cont.checkbox label {
+    flex: 0 0 auto;
+    font-size: inherit;
+    position: static;
+}
+
+input[type="checkbox"]:checked {
+    appearance: none;
+    background-color: var(--yellow);
+    border: 2px solid white;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    border-radius: 0;
+}
+
+label.terms {
+    padding: 0;
+    top: 10%;
 }
 
 button {
