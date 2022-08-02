@@ -176,6 +176,11 @@ input:focus {
     border: 2px solid var(--yellow);
 }
 
+input:placeholder-shown {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 input:focus::placeholder {
     color: transparent;
 }
@@ -220,7 +225,7 @@ label.terms {
 }
 
 button {
-    margin: 0 100px;
+    margin: 12px 100px 0 100px;
     height: 80px;
     background-color: var(--yellow);
     color: var(--dark-gray);
@@ -228,4 +233,27 @@ button {
     font-size: inherit;
     font-weight: bold;
     cursor: pointer;
+}
+
+input:valid:not(:placeholder-shown) {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/240px-Eo_circle_green_checkmark.svg.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) 50%;
+}
+
+.requirement {
+    padding: 0;
+    height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+    border: 0;
+    font-size: .6em;
+}
+
+input:invalid:not(:placeholder-shown) ~ .requirement {
+    max-height: 200px;
+    padding: 1em;
 }
