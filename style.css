@@ -192,10 +192,10 @@ input:focus::placeholder {
     align-items: center;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"]#terms {
     appearance: none;
-    background-color: var(--light-gray);
     border: none;
+    border: 2px solid white;
     width: 1em;
     height: 1em;
     padding: 0;
@@ -209,8 +209,9 @@ input[type="checkbox"] {
     position: static;
 }
 
-input[type="checkbox"]:checked {
+input[type="checkbox"]#terms:checked {
     appearance: none;
+    visibility: visible;
     background-color: var(--yellow);
     border: 2px solid white;
     width: 1em;
