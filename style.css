@@ -256,5 +256,5 @@ input:valid:not(:placeholder-shown) {
 
 input:invalid:not(:placeholder-shown) ~ .requirement {
     max-height: 200px;
-    padding: 1em;
+    padding: 1.1em;
 }
